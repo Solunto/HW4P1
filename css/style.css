@@ -1,0 +1,154 @@
+/*
+//	Intro. to GUI 1 HW4
+//	Date: 8/7/2021
+//	By: Ari Primak
+//	This assignment involved converting HW3 to use JQuery in part 1, and adding functionality with JQuery (sliders and tabs)
+//  in part 2.
+*/
+header {
+    text-align:center;
+    font-size:170%;
+}
+
+body {
+    display:block;
+    width:90%;
+    margin-right:auto;
+}
+#top {
+    text-align:center;
+}
+
+p {
+    font-size:120%;
+}
+
+
+#formdiv {
+    width:340px;
+    padding: 8px;
+    border:1px solid black;
+    background-color:bisque;
+    margin:0 auto;
+}
+
+form {
+    padding: 0 10px;
+}
+
+form div {
+    padding:3px 0px;
+}
+
+
+/*
+    I wanted the label for each field to be on the left side of the box, but the fields
+    to be on the right, so I hashed this out.
+    I'm sure there's a simpler way to do this.
+*/
+.fielddiv {
+    display:inline;
+}
+
+/*
+    The shadow is included to make it easier to read.
+*/
+.labeldiv {
+    float:left;
+    text-shadow:1px 1px 1px black;
+    font-size:110%;
+}
+
+.inputdiv {
+    text-align:right;
+}
+
+#btndiv {
+    padding-top:5px;
+    margin-bottom:-2px;
+    text-align:center;
+}
+
+#sbmtbtn {
+    font-size:110%;
+}
+
+
+#table {
+    white-space: nowrap;
+    overflow:auto;
+    max-width:600px;
+    min-width:600px;
+    max-height:500px;
+    min-height:500px;
+    margin:30px auto;
+}
+
+table {
+    border:1px solid black;
+    text-align:right;
+}
+
+th {
+    border:2px groove black;
+}
+
+/*
+    Checkerboard styling etc, etc.
+*/
+tr:nth-of-type(odd) th:nth-of-type(even), tr:nth-of-type(even) th:nth-of-type(odd) {
+    background-color:cyan;
+}
+
+tr:nth-of-type(odd) th:nth-of-type(odd), tr:nth-of-type(even) th:nth-of-type(even) {
+    background-color:turquoise;
+}
+
+/*
+    For reasons I will not pretend to understand, following the advice of
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity to duplicate
+    meaningless identifiers as a way to increase specificity makes the leftmost
+    column's styling work. Some questions are better left unanswered.
+*/
+#headerRow th {
+    background-color:green;
+    color:cyan;
+    top:0;
+    position:sticky;
+    z-index:100;
+}
+.headerColumn.headerColumn.headerColumn.headerColumn.headerColumn.headerColumn {
+    background-color:green;
+    color:cyan;
+    left:0;
+    position:sticky;
+}
+
+/*
+    The top-left most box (it's blank and the border looks weird because of that)
+*/
+th#blank {
+    border:0px;
+    background-color:white;
+}
+
+footer {
+    font-size: small;
+    font-style: italic;
+    text-align:center;
+}
+
+input.invalid {
+    border: 3px dashed red;
+}
+
+input.pass {
+    /* Setting the border with an empty string returns it to the default styling */
+    border: "";
+}
+
+label.invalid {
+    color:red;
+    text-shadow: 0px 0px 1px red;
+    font-weight:bold;
+}
